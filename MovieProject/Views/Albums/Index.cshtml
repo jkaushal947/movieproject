@@ -1,0 +1,55 @@
+﻿@model IEnumerable<MovieProject.Models.movies>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>List</title>
+</head>
+<body>
+    <h2>List of Marvel Movies</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+    @using (Html.BeginForm())
+    {
+        <p>
+            Title: @Html.TextBox("SearchString")
+            Genre: @Html.DropDownList("movieGenre", "All")
+            <input type="submit" value="Search" />
+        </p>
+    }
+    <table class="table">
+        <tr>
+            <th>Movie Title</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+            <th>Price (£)</th>
+            <th>Image</th>
+            <th>Trailer</th>
+            <th>Options</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.movietitle)</td>
+                <td>@Html.DisplayFor(modelItem => item.releasedate)</td>
+                <td>@Html.DisplayFor(modelItem => item.genre)</td>
+                <td>@Html.DisplayFor(modelItem => item.price)</td>
+                <td><img src="~/Content/imgs/@item.img" width="100" height="150"/></td>
+                <td><iframe src="https://www.youtube.com/embed/@item.video" width="320" height="240" controls></iframe></td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { movieid = item.movieid }) |
+                    @Html.ActionLink("Details", "Details", new { movieid = item.movieid }) |
+                    @Html.ActionLink("Delete", "Delete", new { movieid = item.movieid }) |
+                </td>
+            </tr>
+            }
+    </table>
+</body>
+</html>

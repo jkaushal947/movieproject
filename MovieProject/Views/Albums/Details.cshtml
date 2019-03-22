@@ -1,0 +1,34 @@
+﻿@model MovieProject.Models.movies
+@{
+    ViewBag.Title = "Details";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <h2>Details</h2>
+    <h4>Movie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>Movie Title</dt>
+        <dd>@Html.DisplayFor(modelItem => Model.movietitle)</dd>
+        <dt>Release Date</dt>
+        <dd>@Html.DisplayFor(modelItem => Model.releasedate)</dd>
+        <dt>Genre</dt>
+        <dd>@Html.DisplayFor(modelItem => Model.genre)</dd>
+        <dt>Price</dt>
+        <dd>@Html.DisplayFor(modelItem => Model.price)</dd>
+        <dt>Image</dt>
+        <dd>@Html.DisplayFor(modelItem => Model.img)</dd>
+        <dt>Trailer</dt>
+        <dd>@Html.DisplayFor(modelItem => Model.video)</dd>
+    </dl>
+    <div>
+        @Html.ActionLink("Back to List/Home", "Index")
+    </div>
+</body>
+</html>
