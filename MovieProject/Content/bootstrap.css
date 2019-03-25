@@ -63,6 +63,9 @@ h1 {
   margin: .67em 0;
   font-size: 2em;
 }
+h2{
+    text-shadow: 2px 2px 4px #000000;
+}
 mark {
   color: #000;
   background: #ff0;
@@ -115,7 +118,6 @@ select,
 textarea {
   margin: 0;
   font: inherit;
-  color: inherit;
 }
 button {
   overflow: visible;
@@ -266,6 +268,12 @@ th {
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
+
+/*@font-face{
+    font-family: 'Marvel';
+    src: url('../fonts/ybtfonts_marvel/Marvel-Regular.tff');
+}*/
+
 .glyphicon {
   position: relative;
   top: 1px;
@@ -4960,12 +4968,15 @@ a.badge:focus {
   padding-bottom: 30px;
   margin-bottom: 30px;
   color: inherit;
-  background-image:url(imgs/marvel_web_banner.png);
-  /*background-color: #eee;*/
+  background-color:red;
+  background-image:linear-gradient(red, white);
+  /*background-image:url(imgs/marvel_web_banner.png);
+  background-repeat:no-repeat;*/
 }
 .jumbotron h1,
 .jumbotron .h1 {
   color: inherit;
+  font-family: 'Marvel', sans-serif;
 }
 .jumbotron p {
   margin-bottom: 15px;
