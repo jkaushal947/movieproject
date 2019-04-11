@@ -47,7 +47,7 @@ a {
     color: #337ab7;
     text-decoration: none;
     font-weight: bolder;
-    text-shadow: none;
+    text-shadow:2px 2px 4px #ffffff;
     background-color: transparent;
 }
 a:active,
@@ -56,6 +56,10 @@ a:hover {
 }
 
 a .table{
+    text-shadow: none;
+}
+
+a .container{
     text-shadow: none;
 }
 
