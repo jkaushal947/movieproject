@@ -6792,4 +6792,8 @@ button.close {
     display: none !important;
   }
 }
+
+tbody{
+    text-shadow: 2px 2px 4px #ffffff;
+}
 /*# sourceMappingURL=bootstrap.css.map */
